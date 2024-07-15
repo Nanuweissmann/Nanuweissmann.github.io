@@ -1,0 +1,1871 @@
+/*
+Theme Name: Insove Medical Healthcare
+Theme URI: 
+Author: 
+Author URI: 
+Description: Insove Medical Healthcare is specially designed product packaged for Insove Medical Healthcare by TemplatesJungle.
+Version: 
+*/
+
+/*--------------------------------------------------------------
+This is main CSS file that contains custom style rules used in this template
+--------------------------------------------------------------*/
+
+/*------------------------------------*\
+    Table of contents
+\*------------------------------------*/
+
+/*------------------------------------------------
+
+CSS STRUCTURE:
+
+1. VARIABLES
+
+2. GENERAL TYPOGRAPHY
+  2.1 General Styles
+  2.2 Text Color & Weight
+  2.3 Background Color
+  2.4 Border Radius
+  2.5 Section
+    - Section Paddings
+    - Section Margins
+    - Section Title
+    - Content width
+  2.6 Buttons
+    - Button Sizes
+    - Button Shapes
+    - Button Color Scheme
+    - Button Aligns
+
+3. CONTENT ELEMENTS
+  - Dropdown
+  - Svg Color
+  - Search Bar
+
+4. SITE STRUCTURE
+  4.1 Header
+  4.2 Intro
+  4.3 Best Services Section
+  4.4 Book Appointment Section
+  4.5 Testimonial Section
+  4.6 Our Team Section
+  4.7 Faqs Section
+  4.8 Tabs- Department Section
+  4.9 Blog Section
+  4.10 Brand Section
+  4.11 Subscribe Section
+  4.12 Footer
+
+    
+/*--------------------------------------------------------------
+/** 1. VARIABLES
+--------------------------------------------------------------*/
+:root {
+  --accent-color: #333;
+  --black-color: #000;
+  --dark-color: #FF7024;
+  --primary-color: #000000;
+  --primary-color-200: #E8F0F1;
+  --primary-color-400: #c4e9ed;
+  --gray-color: #777F81;
+  --bs-gray-300: #DCDCDC;
+  --bs-light-rgb: rgba(255, 255, 255, 1);
+  --bs-primary-rgb: rgba(144, 198, 205, 1);
+  --light-color: #fff;
+  --swiper-theme-color: #111 !important;
+  --cadet-blue-color: #9AB4B7;
+  
+
+}
+
+/* on mobile devices below 600px
+ */
+@media screen and (max-width: 600px) {
+  :root {
+    --header-height: 100px;
+    --header-height-min: 80px;
+  }
+}
+
+/* Fonts */
+:root {
+  --body-font: "Poppins", sans-serif;
+  --heading-font: "Jost", sans-serif,;
+}
+
+/*----------------------------------------------*/
+/* 2 GENERAL TYPOGRAPHY */
+/*----------------------------------------------*/
+
+/* 2.1 General Styles
+/*----------------------------------------------*/
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+ul.inner-list li,
+ul>li {
+  color: var(--dark-gray-color);
+}
+
+a {
+  color: var(--dark-color);
+  text-decoration: none;
+  transition: 0.3s color ease-out;
+  
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
+a.light {
+  color: var(--light-color);
+}
+
+a:hover.light {
+  color: var(--light-color);
+}
+
+p {
+  color: #000000;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+.highlight {
+  background: var(--primary-color);
+  color: var(--light-color);
+}
+
+.focus-transparent:focus {
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0);
+}
+
+/* Sección preguntas frecuentes
+/*----------------------------------------------*/
+
+.preguntasfrecuentes {
+  font: var(--heading-font);
+  font-style:  italic;
+  text-transform: lowercase;
+}
+
+
+
+/* 2.2 Text Color & Weight
+/*----------------------------------------------*/
+.text-primary {
+  color: var(--primary-color) !important;
+}
+
+.text-primary-500 {
+  color: #FF7024 !important;
+}
+
+.text-primary-500:hover {
+  color: var(--primary-color) !important;
+}
+
+.text-dark {
+  color: #000000 !important;
+}
+
+.text-light {
+  color: #FF7024 !important;
+}
+
+.nanu {
+  font-family: var(--heading-font) italic
+  
+}
+
+.text-gray {
+  color: var(--gray-color) !important;
+}
+
+.text-cadet-blue {
+  color: #DD68B8 !important;
+}
+
+.fw-semibold {
+  font-weight: 600;
+}
+
+.fw-medium {
+  font-weight: 500;
+}
+
+
+
+/* 2.3 Background Color
+/*----------------------------------------------*/
+.bg-light {
+  background-color: var(--light-color) !important;
+}
+
+.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.bg-primary-200 {
+  background-color: var(--primary-color-200) !important;
+}
+
+.bg-primary-dim {
+  background-color: var(--bs-primary-rgb) !important;
+}
+
+/* 2.4 Border Radius
+/*----------------------------------------------*/
+.border-circle {
+  border-radius: 50% !important;
+}
+
+.secciónseparada {
+  padding-bottom: 15%;
+}
+
+.border-radius-10 {
+  border-radius: 10px !important;
+}
+
+.border-radius-20 {
+  border-radius: 20px !important;
+}
+
+.border-radius-30 {
+  border-radius: 30px !important;
+}
+
+.border-radius-35 {
+  border-radius: 35px !important;
+}
+
+.border-radius-top-10 {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.border-right {
+  border-right: 1px solid var(--bs-gray-300);
+}
+
+/*--------------------------------------------------------------
+/** 2.5 Section
+--------------------------------------------------------------*/
+/* - Section Padding
+--------------------------------------------------------------*/
+.padding-small {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.padding-medium {
+  padding-top: 4em;
+  padding-bottom: 4em;
+
+}
+
+.padding-large {
+  padding-top: 5em;
+  padding-bottom: 2em;
+}
+
+/* - Section Margin
+--------------------------------------------------------------*/
+.margin-small {
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+.margin-medium {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+.margin-large {
+  margin-top: 7em;
+  margin-bottom: 7em;
+}
+
+@media only screen and (max-width: 600px) {
+
+  .margin-small,
+  .margin-medium,
+  .margin-large {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+}
+
+/* - Section Title
+--------------------------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--heading-font);
+  font-weight: 500;
+  line-height: 5;
+}
+
+h1.light,
+h2.light,
+h3.light,
+h4.light,
+h5.light {
+  color: var(--light-color);
+  
+}
+
+
+/* - Section width
+--------------------------------------------------------------*/
+.u-full-width {
+  width: 100%;
+  border: none;
+}
+
+.container-md {
+  max-width: 1465px;
+}
+
+.container-lg {
+  max-width: 1920px;
+}
+
+
+/*--------------------------------------------------------------
+/** 2.6 Buttons
+--------------------------------------------------------------*/
+/* - Button Sizes
+------------------------------------------------------------- */
+/*.btn.btn-small {
+  padding: 0.8em 1.8em;
+  font-size: 0.65em;
+  position: center;
+    color: #F6F3EE;
+    font-size: 48px;
+    font-style: italic;
+    text-align: center;
+    top: 10%; /* Ajusta este valor según sea necesario 
+    left: 10%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+}
+
+
+
+.btn.btn-large {
+  padding: 0.8em 4.6em;
+  font-size: 1.4em;
+  
+}
+
+/* - Button Shapes
+------------------------------------------------------------- 
+
+
+.btn.btn-pill,
+.btn.btn-pill::after {
+  border-radius: 60px;
+}
+
+/* button outline 
+.btn.btn-outline-dark,
+.btn.btn-outline-light,
+.btn.btn-outline-accent,
+.btn.btn-outline-primary {
+
+  text-shadow: none;
+  box-shadow: none;
+}
+
+.btn.btn-outline-dark:hover::after,
+.btn.btn-outline-light:hover::after {
+  background-color: transparent;
+}
+
+.btn.btn-outline-dark {
+  border-color: rgba(0, 0, 0, 1);
+  color: var(--dark-color);
+}
+
+.btn.btn-outline-dark:hover {
+
+  color: var(--light-color);
+}
+
+.btn.btn-outline-light {
+  border-color: rgba(255, 255, 255, 1);
+  color: var(--light-color);
+}
+
+.btn.btn-outline-gray {
+  
+  border-color: var(--gray-color-200);
+  color: var(--dark-color);
+}
+
+.btn.btn-outline-gray:hover {
+  color: var(--light-color) !important;
+}
+
+.btn.btn-outline-primary {
+  background: transparent;
+  border-color: var(--primary-color);
+  color: var(--dark-color);
+}
+
+.btn.btn-outline-primary:hover {
+  border-color: var(--dark-color);
+  color: #DD68B8
+}
+
+.btn.btn-full {
+  display: block;
+  margin: .85em 0;
+  width: 100%;
+  letter-spacing: 0.12em;*/
+  
+
+
+.display-3{
+  text-align: center;
+  left: 1150px;
+  color: #F6F3EE; 
+  font-size: 48px; 
+  font-style: italic;
+}
+
+.display-3{
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative
+
+        
+}
+
+.banner-content {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  
+}
+
+.display-3 {
+  position: absolute;
+  text-shadow: #000000 2px 0 10px;
+  font-size: 40px;
+  font-style: italic;
+  text-align: center;
+  font-style: normal;
+  top: 10%; /* Ajusta este valor según sea necesario */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 1%;
+  color: #FF7024;
+  width: 100%; /* Ancho completo del contenedor */
+  max-width: 100%; /* Ancho máximo igual al ancho de la pantalla */
+}
+
+@media (max-width: 768px) {
+  .display-3 {
+    font-size: 28px; /* Tamaño de fuente reducido para dispositivos móviles */
+    padding-top: 5%; /* Ajuste de espacio superior */
+  }
+}
+
+
+.background-image {
+  width: 100%;
+  height: auto;
+}
+
+.bienestarintegral {
+  position: absolute;
+  color: #F6F3EE;
+  font-size: 40px;
+  font-style: italic;
+  text-align: center;
+  top: 50%; /* Centrar verticalmente */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-top: 7%; /* Ajustar el espacio superior según sea necesario */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Ajustar el sombreado según sea necesario */
+  width: 80%; /* Ajustar el ancho según sea necesario */
+  max-width: 600px; /* Ancho máximo para dispositivos grandes */
+  box-sizing: border-box; /* Incluir padding en el ancho total */
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .bienestarintegral {
+    font-size: 28px; /* Reducir el tamaño de la fuente para dispositivos más pequeños */
+    padding-top: 15%; /* Ajustar el espacio superior para dispositivos más pequeños */
+    max-width: 100%; /* Ancho máximo en dispositivos móviles */
+  }
+}
+
+
+
+
+/* no border radius 
+.btn-rounded-none,
+.btn-rounded-none::after {
+  border-radius: 0; 
+}
+
+
+/* - Buttons Color Scheme
+------------------------------------------------------------- */
+.btn.btn-normal {
+  text-decoration: none;
+  border: none;
+  font-weight: 300;
+}
+
+.btn.btn-normal:hover,
+.btn.btn-normal:focus {
+  box-shadow: none;
+}
+
+.btn.btn-accent {
+  color: var(--light-color);
+  background-color: var(--accent-color);
+  border: none;
+}
+
+.btn.btn-accent:hover {
+  color: var(--light-color) !important;
+  background-color: var(--primary-color);
+}
+
+.btn.btn-black {
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border: none;
+}
+
+.btn.btn-black:hover {
+  color: var(--light-color);
+  
+}
+
+.btn.btn-light {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border: none;
+}
+
+.btn.btn-light:hover {
+
+  color: var(--light-color);
+}
+
+.btn-primary {
+  background-color: #DD68B8;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  cursor: pointer;
+  border-radius: 60px;
+  margin-top: -30px;
+  margin-left: 150px;
+  }
+  
+  .btn-primary:hover {
+    background-color: #F3CDE7;
+    color: #DD68B8;
+  }
+
+  .btn-pill .btn-medium {
+    display: flex;
+    align-content: center;
+  }
+
+
+
+/* - Buttons Aligns
+------------------------------------------------------------- */
+.btn-left {
+  text-align: center;
+  display: block;
+}
+
+.btn-center {
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}
+
+.btn-right {
+  text-align: center;
+  display: block;
+}
+
+/*--------------------------------------------------------------
+/** 3.CONTENT ELEMENTS
+--------------------------------------------------------------*/
+
+/* - Dropdown
+------------------------------------------------------------- */
+
+.navbar-nav .dropdown-toggle::after {
+  border: none;
+}
+
+.navbar-nav .dropdown-item:focus,
+.navbar-nav .dropdown-item:hover,
+.navbar-nav .dropdown-item.active,
+.navbar-nav .dropdown-item:active {
+  color: var(--primary-color);
+  background-color: transparent;
+}
+
+.navbar-nav ul.dropdown-menu>li {
+  font-size: 1em;
+}
+
+ul.dropdown-menu .dropdown-item {
+  display: initial;
+}
+
+.navbar-nav ul.dropdown-menu.show {
+  top: 0px;
+}
+
+/* - Svg Color
+------------------------------------------------------------- */
+svg.light-color {
+  color: var(--light-color);
+}
+
+svg.dark-color {
+  color: var(--dark-color);
+}
+
+svg.primary-color {
+  color: var(--primary-color);
+}
+
+svg.primary-color-500 {
+  color: var(--bs-primary-rgb);
+}
+
+/* - Search Bar
+------------------------------------------------------------- */
+form.search-form svg.search {
+  bottom: 24px;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 991px) {
+  #navbar-primary form.search-form {
+    width: 100%;
+  }
+
+  form.search-form svg.search {
+    right: 40px;
+    bottom: 40px;
+  }
+
+  form.search-form input.form-control {
+    background: var(--bs-gray-200);
+  }
+}
+
+/*----------------------------------------------*/
+/* 4 SITE STRUCTURE */
+/*----------------------------------------------*/
+
+/* 4.1 Header
+/*----------------------------------------------*/
+#primary-header.navbar {
+  z-index: 9;
+  padding-top: 0;
+}
+
+div#navbar-primary {
+  box-shadow: 0px 2px 40px rgba(8, 70, 78, 0.10);
+}
+
+.navbar-nav li.nav-item {
+  height: max-content;
+}
+
+.navbar-nav a.nav-link {
+  line-height: 1.2;
+}
+
+.navbar-nav a.nav-link:hover,
+.navbar-nav a.nav-link.active {
+  color: var(--primary-color) !important;
+}
+
+.navbar button.navbar-toggler {
+  z-index: 100;
+}
+
+.navbar button.navbar-toggler svg.navbar-icon {
+  position: fixed;
+  top: 0;
+  right: 30px;
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+
+  #header .container {
+    max-width: 980px;
+  }
+
+  #header .navbar {
+    box-shadow: none;
+  }
+
+  /* .header-bottom.show {
+    position: absolute;
+    width: 60%;
+    width: 100%;
+    top: -10px;
+    right: 0;
+    padding: 40px 20px 80px 40px !important;
+  } */
+
+  .navbar-nav li.nav-item {
+    font-size: 2.3em;
+    font-weight: 400;
+    height: max-content;
+    border: none;
+    padding-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .header-top ul.contact-list {
+    padding-top: 20px;
+  }
+
+  .header-top .btn-book {
+    text-align: center !important;
+  }
+
+  .contact-list li {
+    font-size: 14px;
+    padding-right: 20px !important;
+  }
+
+  .navbar-nav li.nav-item {
+    font-size: 1.3em;
+  }
+  .navbar button.navbar-toggler svg.navbar-icon {
+    top: 0;
+  }
+
+  /* .header-bottom.show {
+    width: 80%;
+  } */
+}
+
+@media only screen and (max-width: 1920px) and (min-width: 999px) {
+.get-pro{
+  display: none;
+}
+}
+
+/* 4.2 Intro (Billboard) Section Título header
+/*----------------------------------------------*/
+section#intro {
+  margin-top: 30px;
+}
+
+#intro .banner-content {
+  top: 50%;
+  left: 50%;
+  right: 50%;
+  width: 100%;
+  
+  text-align: center; 
+  position: absolute; 
+  font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
+    font-weight: 100; /* Semi bold */
+    font-size: 24px; /* Tamaño de fuente 48px */
+    color: #F3CDE7; /* Color del texto */
+    text-shadow: -1px -1px 0 #000,  
+                 1px -1px 0 #000,  
+                 -1px 1px 0 #000,  
+                 1px 1px 0 #000; /* Sombras para simular el contorno negro */
+}
+
+@media only screen and (max-width: 1920px) {
+  #intro .banner-content {
+    top: 7%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 10vh; /* Hace que el contenedor ocupe toda la altura de la ventana */
+    margin: 0; /* Elimina cualquier margen predeterminado del body */
+    
+
+    
+  
+}
+  }
+
+  #intro img {
+    width: 100%;
+    height: 620px;
+    object-fit: cover;
+
+  }
+
+
+@media only screen and (max-width: 1080px) {
+  #intro .banner-content {
+    text-align: 50% 50%;
+    width: 100%;
+    -webkit-text-stroke: 1px solid black; /* Agrega un borde de 1 píxel de grosor y color negro */
+    top: 50%;
+  left: 50%;
+  right: 50%;
+
+  }
+
+  
+
+
+}
+
+/* Sección heather principal último
+/*----------------------------------------------*/
+
+@media only screen and (max-width: 550px) {
+  #intro .banner-content {
+    .center-text {
+      position: absolute;
+      
+      
+    
+      
+  }
+  
+  /* CSS Global */
+.center-text {
+    position: absolute;
+    top: 30%; /* Ajusta este valor para cambiar la posición vertical */
+    left: 50%;
+    transform: translate(-50%, -50%);
+ 
+}
+
+/* Sección header principal último
+/*----------------------------------------------*/
+
+/* CSS para pantallas pequeñas */
+@media only screen and (max-width: 550px) {
+  #intro .banner-content {
+    width: 100%;
+    text-align: center;
+    top: -20vh;
+    position: relative;
+  }
+}
+
+    
+  }
+}
+
+/* 4.3 Our Best Services Section
+/*----------------------------------------------*/
+#our-services .icon-box  {
+  color: #FF7024;
+  margin-top: 60%;
+  transition: 0.3s ease-out;
+  border: 1px solid black; /* Agrega un borde de 1 píxel de grosor y color negro */
+  padding-top: 60%;
+  padding-right: 50px;
+  
+
+}
+
+#our-services .icon-box:hover {
+  box-shadow: 0px 2px 40px rgb(246, 243, 238);
+  margin-top: 58%;
+  padding-top: 60%;
+}
+
+#our-services .service-icon-box {
+  box-shadow: 0px 2px 40px #FF7024;
+  padding-top: 60%;
+
+}
+
+@media only screen and (max-width) {
+  #our-services .icon-box-content h3.card-title {
+    font-size: 1.2em;
+    color: #FF7024;
+    padding-top: 60%;
+    
+  }
+
+
+  #our-services .icon-box-content {
+    
+    font-size: 0.9em;
+    padding-top: 60%;
+
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #our-services .icon-box-content h3.card-title {
+    font-size: 1.8em;
+    padding-top: 60%;
+    color: var(--dark-color);
+  
+  }
+}
+
+.fototexto {
+  margin-top: 10%;
+  max-width: 100%;
+  display: flex;
+  align-items: center; /* Centra verticalmente */
+  padding: 20px;
+}
+
+.somosuncentrodebienestar {
+  object-position: right top;
+  justify-content: right;
+  position: absolute;
+  right: 0;
+  margin-left: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.text-light, .somosuncentrodebienestar {
+  display: inline-block;
+  
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* 4.4 Book Appointment Section
+/*----------------------------------------------*/
+.contact-form select,
+.contact-form input,
+.contact-form .input-group input {
+  width: 98%;
+  height: 60px;
+}
+
+.contact-form .input-group input {
+  padding-right: 450px;
+}
+
+.input-group span.input-group-text {
+  right: 20px;
+  height: 60px;
+  line-height: 3;
+}
+
+.contact-form select.form-select {
+  background-position: right 1.25rem center;
+}
+
+@media only screen and (max-width: 1399px) {
+  .contact-form .input-group input {
+    padding-right: 290px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .contact-form .input-group input {
+    padding-right: 70px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  #book-appointment .contact-form {
+    display: block !important;
+  }
+}
+
+/* Lista de contenidos del curso
+/*----------------------------------------------*/
+
+.contenidos {
+  font-family: 'Poppins';
+  color: #FF7024;
+  text-align: center;
+  padding: 20px;
+  padding-top: 10%;
+  margin-bottom: 10%;
+  
+}
+
+.lista-izquierda {
+  color: #000000;
+  text-align: left;
+  padding-bottom: 10%;
+  padding-top: 10%;
+  justify-content: flex-start;
+  padding-left: 0%;
+}
+
+.lista-derecha {
+  color: #000000; /* Color del texto (negro en este caso) */
+  text-align: right; /* Alineación del texto a la derecha */
+  right: 0; /* Alinear el elemento con el borde derecho de la ventana */
+  padding-right: 0%;
+
+}
+
+.contenido-lista {
+  display: inline-block; /* Esto hace que los elementos se muestren en línea */
+  vertical-align: middle; /* Alinea verticalmente si es necesario */
+  font-weight: 400;
+}
+
+ul {
+  list-style-type: none; /* Oculta todas las viñetas */
+}
+
+
+.contenido-lista li {
+  position: relative; /* Posición relativa para alinear la línea */
+  padding-bottom: 5px; /* Espacio para la línea debajo del texto */
+}
+
+.contenido-lista li:not(:last-child):after {
+  content: ''; /* Contenido vacío para crear la línea */
+  position: absolute; /* Posición absoluta para la línea */
+  bottom: 0; /* Alinea la línea en la parte inferior del elemento li */
+  left: 0; /* Alinea la línea al principio del elemento li */
+  width: 100%; /* Ancho igual al 100% del elemento li */
+  height: 1px; /* Grosor de la línea */
+  background-color: #FF7024; /* Color de la línea */
+}
+
+/* Sección beneficios
+/*----------------------------------------------*/
+
+body {
+  font-family: 'Jost', sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  color: #FF6600;
+  font-size: 36px;
+  margin-bottom: 40px;
+  
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  vertical-align: baseline;
+}
+
+.benefit {
+  width: 30%;
+  min-width: 250px;
+  padding: 20px;
+  margin: 10px;
+  box-sizing: border-box;
+  padding-bottom: -20px;
+}
+
+.benefit h2 {
+  color: #FF6600;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.benefit p {
+  color: #000;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.benefit.highlighted {
+  background-color: #F9E5F3;
+  border: 2px dashed #DD68B8;
+  border-radius: 20px;
+  margin-bottom: 10%;
+}
+
+.benefit.highlighted::before, .benefit.highlighted::after {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #FF6600;
+}
+
+.benefit.highlighted::before {
+  top: -10px;
+  left: -10px;
+  border-top-left-radius: 50%;
+}
+
+.benefit.highlighted::after {
+  bottom: -10px;
+  right: -10px;
+  border-bottom-right-radius: 50%;
+}
+
+
+/* 4.5 Testimonial Section
+/*----------------------------------------------*/
+#testimonial blockquote {
+  padding: 1000px;
+  margin-top: 500px;
+}
+
+.review-item svg.quote-up {
+  left: 350px;
+  top: 110px;
+  color: #F3CDE7;
+  
+}
+
+.review-item svg.quote-down {
+  right: 400px;
+  bottom: 150px;
+  color: #F3CDE7;
+}
+
+.testimonial-swiper .swiper-horizontal>.swiper-pagination-bullets,
+.testimonial-swiper .swiper-pagination-bullets.swiper-pagination-horizontal,
+.testimonial-swiper .swiper-pagination-custom,
+.testimonial-swiper .swiper-pagination-fraction {
+  left: 53px;
+  width: auto;
+}
+
+.swiper-pagination span.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #1CBCCF;
+}
+
+@media only screen and (max-width: 767px) {
+  #testimonial .image-holder {
+    display: none;
+    position: absolute;
+      font-size: 20px;
+
+  }
+}
+
+
+/* Estilos para el contenedor principal de los slides */
+.testimonial-swiper {
+  overflow-x: hidden; /* Oculta la barra de desplazamiento horizontal */
+  max-width: 1920px;
+  margin: 0 auto; /* Centra el contenedor en la página */
+  position: relative; /* Añade posición relativa para los slides */
+}
+
+
+/* Estilos para los slides */
+.swiper-wrapper {
+  display: flex; /* Utiliza flexbox para los slides */
+  transition: transform 0.3s ease; /* Transición suave para el desplazamiento */
+  -webkit-overflow-scrolling: touch; /* Mejora del rendimiento en iOS */
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  
+}
+
+
+.swiper-slide {
+  flex: 0 0 auto;
+  width: 100%;
+  padding: 150px;
+  justify-content: center;
+  padding-left: 30%;
+  padding-right: 30%;
+  font-family: 'Poppins';
+  
+
+  /* Ajustes para el desplazamiento horizontal */
+  touch-action: pan-y; /* Permitir desplazamiento vertical con el touchpad */
+  overflow-x: scroll; /* Permitir desplazamiento horizontal cuando sea necesario */
+  white-space: wrap; /* Evitar que los slides se envuelvan */
+  -webkit-overflow-scrolling: touch; /* Mejora del rendimiento en iOS */
+  
+}
+
+
+
+
+/* Cursos destacados*/
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container1 {
+  background-color: #F3CDE7;
+  border: 2px dashed #DD68B8;
+  padding-bottom: 150px;
+  display: flex;
+  justify-content: center;
+}
+
+.section1 {
+  background-color: #F6F3EE;
+  border: 1px solid #000000;
+  border-radius: 20px;
+  align-items: center;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: -10px;
+  width: 30%;
+  margin: 10px;
+  margin-top: 100px;
+  display: inline-block;
+  text-align: center;
+}
+
+.section1:hover {
+  border-color: #FF7024;
+  border: 3px solid #DD68B8
+}
+
+.section1 img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.content {
+  padding: 10px;
+}
+
+.content h3 {
+  color: #FF7024;
+  font-family: 'Jost' sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.content h4 {
+  color: #FF7024;
+  font-family: 'Jost' sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+.content p {
+  color: #000000;
+  font-size: 14px;
+}
+
+button {
+  background-color: #DD68B8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 60px;
+  margin-top: 0px;
+}
+
+button:hover {
+  background-color: #F3CDE7;
+  color: #DD68B8;
+}
+
+.section:hover {
+  padding: 10px;
+}
+
+/* Nueva sección about vos */
+.aboutvos {
+  padding: 100px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  display: flex; /* Convertir el contenedor en un contenedor flex */
+  justify-content: center; /* Centrar los elementos horizontalmente */
+}
+
+.aboutvos img {
+  max-width: 100%;
+  border-radius: 10px;
+  border: 1px solid #000000;
+}
+
+.aboutvos-content {
+  display: flex; /* Convertir el contenedor en un contenedor flex */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en varias líneas si es necesario */
+    text-align: center;
+
+
+}
+
+.aboutvos-content h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 36px;
+  color: #000000;
+  
+}
+
+.aboutvos-content p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #000000;
+  
+}
+
+
+
+/* Nuestro foco
+/*----------------------------------------------*/
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.bloques-de-texto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.bloque {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+}
+
+.bloque img {
+  max-width: 300px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  text-align: left;
+}
+
+.texto p {
+  margin: 10px 0;
+}
+
+.texto button {
+  background-color: #DD68B8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-left: 5%;
+}
+
+.boton-ver-mas {
+  background-color: #DD68B8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  align-self: flex-start; /* Alinea el botón a la izquierda */
+}
+
+.boton-ver-mas:hover {
+    background-color: #DD68B8;
+}
+
+.texto button:hover {
+  background-color: #DD68B8;
+}
+
+.bloque p {
+  text-align: left;
+  margin: 10px 0;
+  width: 308px;
+}
+
+.bloque button {
+  background-color: #DD68B8;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  border-radius: 60px;
+  margin-top: 10px;
+}
+
+.bloque button:hover {
+  background-color: #F3CDE7;
+  color: #DD68B8;
+}
+
+
+/* Instructoras
+/*----------------------------------------------*/
+body {
+  font-family: 'Poppins', sans-serif;
+  font-display: 'regular';
+  padding: 20px;
+  justify-items: center;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+align-items: center;
+}
+
+.instructor {
+  border-radius: 15px;
+  text-align: center;
+  width: 100%;
+  flex: 1; /* O puedes definir un ancho específico */
+  margin: 5px; /* Espacio entre secciones */
+  padding: 20px;
+}
+
+.instructor img {
+
+  border: 1px solid black;
+  border-radius: 10px;
+  
+  
+}
+
+.etiqueta {
+    color: #FF7024;
+    display: inline-block;
+    padding: 5px 10px;
+    margin: -10px -10;
+    border-radius: 10px;
+    font-family: 'Poppins';
+    font-size: 24px;
+    padding-top: 20px;
+
+}
+
+.descripcion {
+  padding: 20px;
+  padding-top: 10px;
+  color: black;
+  font-size: 1.2em;
+  font-weight: medium;
+}
+
+
+/* 4.6 Our Team Section
+/*----------------------------------------------*/
+#our-team .swiper-horizontal>.swiper-pagination-bullets,
+#our-team .swiper-pagination-bullets.swiper-pagination-horizontal,
+#our-team .swiper-pagination-custom,
+#our-team .swiper-pagination-fraction {
+  bottom: -6px;
+}
+
+@media only screen and (max-width: 767px) {
+  #our-team .team-member {
+    flex-wrap: wrap;
+  }
+}
+
+
+/* 4.7 Preguntas frecuentes Section
+/*----------------------------------------------*/
+.accordion .accordion-item {
+  border-bottom: 1px solid black !important;
+  font-family: var(--heading-font);
+  text-transform: uppercase;
+}
+
+.accordion .accordion-button:not(.collapsed) {
+  color: var(--dark-color);
+}
+
+.accordion .accordion-button::after {
+  content: "";
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.accordion .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='minus' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+  transform: rotate(0deg);
+}
+
+
+/* 4.8 Tabs- Department Section
+/*----------------------------------------------*/
+.medical-department-tab .nav-tabs .nav-item.show .nav-link,
+.medical-department-tab .nav-tabs .nav-link.active,
+.medical-department-tab .nav-tabs .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
+.medical-department-tab .tab-content .tab-pane {
+  width: 65%;
+}
+
+.medical-department-tab .tab-content .tab-pane:after {
+  content: "";
+  background: url(images/icon-pattern.png) no-repeat right;
+  width: 339px;
+  height: 339px;
+  position: absolute;
+  top: 0;
+  right: -410px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .medical-department-tab .tab-content .tab-pane {
+    width: 100%;
+  }
+
+  .medical-department-tab .tab-content .tab-pane:after {
+    background: none;
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  #department .medical-department-tab {
+    padding-left: 10px !important;
+  }
+
+  .medical-department-tab button {
+    padding: 0;
+    font-size: 14px;
+  }
+
+  .medical-department-tab .nav-tabs {
+    padding: 0 !important;
+  }
+
+  .medical-department-tab .tab-content h2 {
+    font-size: 23px;
+  }
+
+  .medical-department-tab .tab-content p {
+    font-size: 15px;
+  }
+}
+
+.numeroatencion {
+  font-family: var(--heading-font);
+  font-size: 20px;
+}
+
+
+
+/* 4.9 Blog Section
+/*----------------------------------------------*/
+.post-grid .card-image span {
+  bottom: 0;
+  left: 28%;
+  padding: 5px 50px;
+  letter-spacing: 1.2px;
+  justify-content: center;
+  border-radius: 60px;
+}
+
+
+
+/* 4.10 Brand Section
+/*----------------------------------------------*/
+#brand-collection .col .bottom-image {
+  display: none;
+}
+
+#brand-collection .col:hover .bottom-image {
+  display: inline;
+}
+
+#brand-collection .col:hover .top-image {
+  display: none;
+}
+
+
+#subscribe {
+  text-align: left; /* Alinear contenido a la izquierda */
+}
+
+#subscribe input[type="text"] {
+  width: 100%; /* Ancho completo del contenedor */
+  max-width: 100%; /* Ancho máximo igual al ancho de la pantalla */
+  background: transparent;
+  border: 1px solid black;
+  height: 65px;
+  font-size: 28px;
+  margin-bottom: 10px; /* Espacio inferior entre el input y el botón */
+  box-sizing: border-box; /* Incluir padding y border en el ancho total */
+}
+
+#subscribe button.btn-subscribe {
+  width: calc(100% - 20px); /* Ancho del botón ajustado */
+  max-width: 100%; /* Ancho máximo igual al ancho de la pantalla */
+  height: 61px;
+  background-color: #DD68B8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 60px;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 549px) {
+  #subscribe {
+    text-align: center; /* Alinear contenido al centro en pantallas más grandes */
+  }
+
+  #subscribe input[type="text"],
+  #subscribe button.btn-subscribe {
+    width: auto; /* Ancho automático según contenido */
+    max-width: none; /* Eliminar el ancho máximo */
+  }
+
+  #subscribe button.btn-subscribe {
+    margin-left: 20px; /* Margen izquierdo entre el input y el botón */
+  }
+}
+
+
+
+
+
+
+/* 4.12 Footer Section
+/*----------------------------------------------*/
+.footer-menu ul.menu-list {
+  column-count: 2;
+}
+
+.footer-menu table.schedule {
+  width: 90%;
+}
+
+@media only screen and (max-width: 991px) {
+  .footer-menu table.schedule {
+    width: 100%;
+  }
+}
+
+
+/*--------------------------------------------------------------
+blog page style start
+--------------------------------------------------------------*/
+.page-item.active .page-link {
+  z-index: 3;
+  color: #fff;
+  background-color: var(--dark-color);
+  border-color: var(--dark-gray-color);
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: var(--dark-color);
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.page-link:focus {
+  z-index: 3;
+  color: var(--dark-color);
+  background-color: #e9ecef;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem var(--dark-gray-color);
+}
+
+.page-link {
+  color: var(--dark-color);
+}
+
+
+
+/*--------------------------------------------------------------
+reviews page style start
+--------------------------------------------------------------*/
+.reviews-components {
+  border: 1px solid var(--light-text-color);
+  box-shadow: 0px 12px 90px rgba(12, 12, 12, 0.06);
+  border-radius: 9px;
+}
+
+iconify-icon.quote {
+  font-size: 60px;
+  color: var(--bs-primary-rgb);
+}
+
+
+
+/*--------------------------------------------------------------
+  Price page style
+  --------------------------------------------------------------*/
+.plan-post {
+  border: 1px solid var(--primary-color);
+}
+
+span.price-tick {
+  color: var(--accent-color);
+}
+
+.price-option {
+  height: 320px;
+}
+
+.recommend-price {
+  background: var(--primary-color);
+}
+
+
+
+/*--------------------------------------------------------------
+  Gallery page style
+  --------------------------------------------------------------*/
+
+button.filter-button.gallery-btn {
+  letter-spacing: 0.075rem;
+  border: 2px solid var(--primary-color-400);
+  background: transparent;
+  color: var(--accent-color);
+  border-radius: 30px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  transition: all 0.3s ease-in;
+  
+}
+
+button.filter-button.gallery-btn.active {
+  border: 2px solid var(--black-color);
+}
+
+button.filter-button.gallery-btn:hover {
+  border: 2px solid var(--black-color);
+}
+
+
+
+
+/*--------------------------------------------------------------
+  Booking page style
+  --------------------------------------------------------------*/
+.form-control:focus {
+  border: 2px solid var(--black-color);
+  box-shadow: none;
+}
+
+
+
+/*--------------------------------------------------------------
+  Department page style
+  --------------------------------------------------------------*/
+span.price-tick {
+  color: var(--primary-color);
+}
+
+.escribinos {
+  background-color: #DD68B8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 60px;
+  margin-top: 10px;
+  margin-left: 100px;
+}
+
+.escribinos:hover {
+  background-color: #F3CDE7;
+  color: #DD68B8;
+}
+
+.bienestarintegral {
+  font-family: 'Poppins';
+}
+.boton-ver-mas {
+  background-color: #DD68B8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 60px;
+  margin-top: 10px;
+  margin-left: 100px;
+}
+
+.boton-vermas:hover {
+  background-color: #F3CDE7;
+  color: #DD68B8;
+}
